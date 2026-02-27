@@ -1,0 +1,34 @@
+
+<div class="container">
+  <h1>Chat (Angular → FastAPI → Groq)</h1>
+
+  <div class="card">
+    <label for="system">System Instruction</label>
+    <textarea id="system" [(ngModel)]="system" rows="2" placeholder="You are a helpful assistant."></textarea>
+  </div>
+
+  <div class="card">
+    <label for="prompt">Your Prompt</label>
+    <textarea id="prompt" [(ngModel)]="prompt" rows="4" placeholder="Ask me anything..."></textarea>
+  </div>
+
+  <div class="row">
+    <div class="field">
+      <label for="temperature">Temperature</label>
+      <input id="temperature" type="number" step="0.1" min="0" max="2" [(ngModel)]="temperature">
+    </div>
+    <div class="field">
+      <label for="maxTokens">Max Tokens</label>
+      <input id="maxTokens" type="number" min="1" max="4096" [(ngModel)]="maxTokens">
+    </div>
+  </div>
+
+  <button (click)="onSend()" [disabled]="loading">{{ loading ? 'Thinking…' : 'Send' }}</button>
+
+  <div class="error" *ngIf="error">{{ error }}</div>
+
+  <div class="result" *ngIf="output">
+    <h2>Response</h2>
+    <pre>{{ output }}</pre>
+  </div>
+</div>
