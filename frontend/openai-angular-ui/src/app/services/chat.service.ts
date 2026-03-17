@@ -18,7 +18,7 @@ export interface ChatResponse {
 
 @Injectable({ providedIn: 'root' })
 export class ChatService {
-  private baseUrl = 'http://localhost:8000';
+  private baseUrl = 'http://localhost:8500';
   constructor(private http: HttpClient) {}
 
   sendPrompt(body: ChatRequest): Observable<ChatResponse> {

@@ -11,7 +11,7 @@ load_dotenv()
 
 # --- Read configuration (default to Groq) ---
 PROVIDER = (os.getenv("PROVIDER", "groq") or "groq").strip().lower()
-ALLOWED_ORIGINS = (os.getenv("ALLOWED_ORIGINS", "http://localhost:4200") or "http://localhost:4200").split(",")
+ALLOWED_ORIGINS = (os.getenv("ALLOWED_ORIGINS", "http://localhost:4200,http://localhost:4300") or "http://localhost:4200,http://localhost:4300").split(",")
 
 if PROVIDER != "groq":
     # We only support Groq in this build to avoid falling back to OpenAI by mistake.
