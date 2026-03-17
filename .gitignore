@@ -269,3 +269,10 @@ frontend/openai-angular-ui/.angular/cache/17.3.17/babel-webpack/f120381712ac9a30
 frontend/openai-angular-ui/.angular/cache/17.3.17/babel-webpack/fa33c07e2cc8a2073197d4db0ea49795edeeaef3110233d6f60cae27aa11c649.json
 frontend/openai-angular-ui/.angular/cache/17.3.17/babel-webpack/ffd93d23cb6442da1af0d0e7062685bad605597613c843b1267ed8ad495dee31.json
 frontend/openai-angular-ui/.angular/cache/17.3.17/babel-webpack/ffff18d36ddf2c8c079187df6edb5ec993ba34f956b529530826f9d97dcd3141.json
+
+
+# Node modules
+frontend/openai-angular-ui/node_modules/
+
+# Angular build/cache
+frontend/openai-angular-ui/.angular/cache
